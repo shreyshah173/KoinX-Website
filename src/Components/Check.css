@@ -1,0 +1,48 @@
+.card {
+    background-color: #e9ecef;
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+    border-radius: 0.35rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.1rem;
+    padding: 1rem;
+    /* Add gradient background here */
+}
+
+.card1 {
+    background: linear-gradient(to bottom right, #76efa4, #1160ad);
+}
+
+.card2 {
+    background: linear-gradient(to bottom right, #ff9665, #f13c37);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-img-left {
+    width: 25%;
+    margin-right: 2rem;
+}
+
+.card-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: white;
+    border-color: white;
+    border-radius: .5em;
+    color: black;
+    font-weight: 600;
+}
