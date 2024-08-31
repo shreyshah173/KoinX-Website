@@ -1,3 +1,8 @@
+# The project is deployed on vercel and netlify links are given below
+Vercel app :  https://koinx-shreyshah173.vercel.app/ <br></br>
+Netlify    :  https://65e9c3460d726d0f9956ee6d--euphonious-donut-b7a00a.netlify.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
