@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [18.x, 20.x]  # Based on compatibility with dependencies like React 18.x and your package.json
 
     steps:
     - uses: actions/checkout@v4
@@ -26,13 +26,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - run: npm install --force
+    - run: npm install --force  # Forces install of dependencies to ensure compatibility
 
-    - run: npm ci
+    - run: npm ci  # Installs dependencies from package-lock.json for consistent builds
 
-    - run: npm run build --if-present
+    - run: npm run build --if-present  # Builds the React app
 
-    - run: npm test
+    - run: npm test  # Runs tests, ensure your test suite is set up in your React project
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20.x'
+        node-version: '20.x'  # Specifies Node.js version for deployment
 
     - name: Install dependencies
       run: npm ci
@@ -56,4 +56,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./build  # Points to the build directory for deployment
